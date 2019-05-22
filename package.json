@@ -1,0 +1,15 @@
+{
+  "name": "pinturillo_nodejs",
+  "version": "1.0.0",
+  "description": "Pinturillo Server",
+  "main": "main.js",
+  "dependencies": {
+    "socket.io": "^2.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "main.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
