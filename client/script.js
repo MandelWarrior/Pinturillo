@@ -57,6 +57,7 @@ class Button {
     }
 
     show() {
+        rectMode(CORNER);
         fill(this.color);
         rect(this.x, this.y, this.w, this.h);
         fill(this.textColor);
@@ -265,11 +266,12 @@ function Match() {
 
         var userSeparation = 45;
 
+        rectMode(CORNER);
         fill(0, 150);
         rect(x, y, 200, (userList.length + 1) * userSeparation + 20, 10, 10, 10, 10);
 
         y += 10;
-        x += userSeparation / 2;
+        x += 30;
 
         textAlign(LEFT, TOP);
 
@@ -280,6 +282,16 @@ function Match() {
 
         for (var i in allUsers) {
             var user = allUsers[i];
+
+            if (user.name === thisUser.name) {
+                fill(150, 150, 0);
+                stroke(0);
+                strokeWeight(2);
+                rectMode(CENTER);
+                rect(x - 15, y + userSeparation / 2, 15, userSeparation, 3, 3, 3, 3);
+            }
+
+            noStroke();
 
             textSize(30);
             fill(255);
