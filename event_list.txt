@@ -1,0 +1,13 @@
+Server => Client:
+    add_user_lobby { name }
+    sub_user_lobby { name }
+    update_user_lobby { name, ready }
+    update_user_match { name, score }
+
+    user_list_lobby [{ name, ready }]
+
+Client => Server:
+    log_in { name }
+    log_out
+    ready_state { ready }
+    score points
